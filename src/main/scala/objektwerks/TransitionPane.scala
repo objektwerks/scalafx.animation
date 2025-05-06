@@ -50,6 +50,9 @@ final class TransitionPane extends VBox:
     circle.setStrokeWidth(3.0)
     children = List( pause(circle) )
 
+  val parallelLabel = Label("Parallel:")
+
+
   val controls = List[(Label, Node)](
     fadeLabel -> fadePane,
     fillLabel -> fillPane,
