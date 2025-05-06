@@ -23,3 +23,5 @@ object Transition:
     transition.setCycleCount(Timeline.Indefinite)
     transition.play()
     shape
+
+  def transalte(shape: Shape): Shape = ???
