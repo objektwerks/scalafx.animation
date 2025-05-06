@@ -26,8 +26,8 @@ object Transition:
 
   def translate(shape: Shape): Shape =
     val transition = new TranslateTransition(Duration(5000), shape)
-    transition.setToX(200)
-    transition.setToY(200)
+    transition.setToX(10)
+    transition.setToY(10)
     transition.setCycleCount(Timeline.Indefinite)
     transition.setInterpolator(Interpolator.LINEAR)
     transition.play()
