@@ -8,7 +8,6 @@ import scalafx.util.Duration
 /**
   * See: https://dev.java/learn/javafx-animations/
   */
- */
 object Transition:
   def fade(shape: Shape): Shape =
     val transition = FadeTransition(Duration(millis = 5000), shape)
