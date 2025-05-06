@@ -7,5 +7,5 @@ object App extends JFXApp3:
     stage = new JFXApp3.PrimaryStage:
       scene = View().scene
       title = "Animation"
-      width = 300
-      height = 300
+      width = 400
+      height = 400
