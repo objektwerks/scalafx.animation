@@ -12,4 +12,3 @@ final class View():
 
   val scene = new Scene:
     root = rootPane
-    stylesheets = List("/style.css")
