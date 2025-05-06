@@ -12,13 +12,8 @@ final class AnimationPane extends VBox:
     closable = false
     content = TransitionPane()
 
-  val timelineTab = new Tab:
-    text = "Timeline"
-    closable = false
-    content = TimelinePane()
-
   val tabPane = new TabPane:
-    tabs = List(transitionTab, timelineTab)
+    tabs = List(transitionTab)
 
   children = List(tabPane)
   VBox.setVgrow(this, Priority.Always)
