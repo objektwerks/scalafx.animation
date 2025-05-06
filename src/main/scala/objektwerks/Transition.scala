@@ -2,7 +2,7 @@ package objektwerks
 
 import scalafx.animation.{FadeTransition, FillTransition, Interpolator, PathTransition, Timeline, TranslateTransition}
 import scalafx.scene.paint.Color
-import scalafx.scene.shape.{Path, Shape}
+import scalafx.scene.shape.{LineTo, MoveTo, Path, Shape}
 import scalafx.util.Duration
 
 /**
