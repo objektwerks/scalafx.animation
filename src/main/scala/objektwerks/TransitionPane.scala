@@ -29,7 +29,7 @@ final class TransitionPane extends VBox:
     children = List( path( Circle(10, 10, 10, Color.Red) ) )
 
   val rotateLabel = Label("Rotate:")
-  val rectangle = Rectangle(10, 10, 10, 10)
+  val rectangle = Rectangle(0, 0, 20, 20)
   rectangle.setFill(Color.Red)
   val rotatePane = new Pane:
     children = List( Transition.rotate(rectangle) ) // rotate def exists in ScalaFx.ObservableValue?
