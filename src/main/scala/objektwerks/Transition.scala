@@ -93,6 +93,6 @@ object Transition:
             smaller,
             PauseTransition(Duration(millis = 2000)),
             larger
-    )
+          )
     transition.play()
     shape
