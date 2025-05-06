@@ -21,5 +21,5 @@ Execute
 Resources
 ---------
 * [ScalaFx](https://www.scalafx.org/)
-* [JavaFx 21 Javadoc](https://openjfx.io/javadoc/21/)
+* [JavaFx Javadoc](https://openjfx.io/javadoc/24/)
 * [Jenkov JavaFx](https://jenkov.com/tutorials/javafx/index.html)
