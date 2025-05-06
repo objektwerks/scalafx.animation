@@ -5,7 +5,7 @@ import scalafx.scene.Node
 import scalafx.scene.control.Label
 import scalafx.scene.layout.{Pane, Priority, VBox}
 import scalafx.scene.paint.Color
-import scalafx.scene.shape.Circle
+import scalafx.scene.shape.{Circle, Rectangle}
 
 import Transition.*
 
@@ -29,7 +29,10 @@ final class TransitionPane extends VBox:
     children = List( path( Circle(10, 10, 10, Color.Red) ) )
 
   val rotateLabel = Label("Rotate:")
-
+  val rectangle = Rectangle(10, 10, 10, 10)
+  rectangle.setFill(Color.Red)
+  val rotatePane = new Pane:
+    children = List( Transition.rotate(rectangle) ) // rotate def exists in ScalaFx.ObservableValue?
 
   val controls = List[(Label, Node)](
     fadeLabel -> fadePane,
