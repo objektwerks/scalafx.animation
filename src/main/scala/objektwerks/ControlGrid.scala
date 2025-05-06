@@ -7,9 +7,9 @@ import scalafx.scene.layout.{ColumnConstraints, GridPane}
 
 final class ControlGrid(controls: List[(Label, Node)],
                         columnConstraints: List[ColumnConstraints] = List.empty[ColumnConstraints]) extends GridPane:
-  hgap = 6
-  vgap = 6
-  padding = Insets(top = 6, right = 6, bottom = 6, left = 6)
+  hgap = 12
+  vgap = 12
+  padding = Insets(top = 12, right = 12, bottom = 12, left = 12)
   columnConstraints = columnConstraints
 
   var row = 0
