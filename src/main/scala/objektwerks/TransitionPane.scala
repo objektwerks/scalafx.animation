@@ -52,7 +52,7 @@ final class TransitionPane extends VBox:
 
   val parallelLabel = Label("Parallel:")
   val parallelPane = new Pane:
-    val rectangle = Rectangle(10, 10, 10, 10)
+    val rectangle = Rectangle(0, 0, 10, 10)
     rectangle.setFill(Color.Red)
     children = List( parallel(rectangle) )
 
