@@ -16,7 +16,7 @@ Assembly
 
 Execute
 -------
-1. java -jar .assembly/scalafx-form-$version.jar ( or double-click executable jar )
+1. java -jar .assembly/scalafx-animation-$version.jar ( or double-click executable jar )
 
 Resources
 ---------
