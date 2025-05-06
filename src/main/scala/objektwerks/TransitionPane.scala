@@ -39,7 +39,8 @@ final class TransitionPane extends VBox:
     children = List( scale( Circle(10, 10, 10, Color.Red) ) )
 
   val strokeabel = Label("Stoke:")
-
+  val strokePane = new Pane:
+    children = List( stroke( Circle(10, 10, 10, Color.Red) ) )
 
   val controls = List[(Label, Node)](
     fadeLabel -> fadePane,
