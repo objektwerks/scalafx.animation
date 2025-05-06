@@ -96,8 +96,8 @@ object Transition:
 
   def parallel(shape: Shape): Shape =
     val translate = TranslateTransition(Duration(millis = 5000))
-    translate.setToX(10)
-    translate.setToY(10)
+    translate.setToX(100)
+    translate.setToY(0)
     translate.setInterpolator(Interpolator.Linear)
     
     val rotate = RotateTransition(Duration(millis = 5000))
