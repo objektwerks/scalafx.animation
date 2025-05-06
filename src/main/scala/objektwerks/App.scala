@@ -6,4 +6,6 @@ object App extends JFXApp3:
   override def start(): Unit =
     stage = new JFXApp3.PrimaryStage:
       scene = View().scene
-      title = "App"
+      title = "Animation"
+      width = 600
+      height = 600
