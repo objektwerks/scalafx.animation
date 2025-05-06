@@ -69,7 +69,7 @@ object Transition:
     shape
 
   def stroke(shape: Shape): Shape =
-    val transition = new StrokeTransition(Duration(5000), shape);
+    val transition = new StrokeTransition(Duration(5000), shape)
     transition.setFromValue(Color.Red)
     transition.setToValue(Color.Yellow)
     transition.setInterpolator(Interpolator.Linear)
