@@ -1,6 +1,6 @@
 package objektwerks
 
-import scalafx.animation.{FadeTransition, Interpolator}
+import scalafx.animation.{FadeTransition, Interpolator, Timeline}
 import scalafx.scene.Node
 import scalafx.util.Duration
 
@@ -10,5 +10,6 @@ object Transition:
     transition.setFromValue(1.0)
     transition.setToValue(0)
     transition.setInterpolator(Interpolator.Linear)
+    transition.setCycleCount(Timeline.INDEFINITE)
     transition.play()
     node
