@@ -7,6 +7,7 @@ import scalafx.scene.paint.Color
 import scalafx.scene.shape.Circle
 
 import Timeline.*
+import scalafx.scene.Node
 
 final class TimelinePane extends VBox:
   padding = Insets(6)
@@ -14,6 +15,11 @@ final class TimelinePane extends VBox:
   val timeLineLabel = Label("Time Line:")
   val timeLinePane = new Pane:
     children = List( timeline( Circle(10, 10, 10, Color.Red) ) )
+
+    val controls = List[(Label, Node)](
+      timeLineLabel -> timeLinePane
+    )
+    val controlGrid = ControlGrid(controls)
 
   children = List( Label("TODO") )
   VBox.setVgrow(this, Priority.Always)
