@@ -1,6 +1,7 @@
 package objektwerks
 
 import scalafx.geometry.Insets
+import scalafx.scene.Node
 import scalafx.scene.control.Label
 import scalafx.scene.layout.{Pane, Priority, VBox}
 import scalafx.scene.paint.Color
@@ -15,5 +16,10 @@ final class TransitionPane extends VBox:
   val fadePane = new Pane:
     children = List( fade( Circle(50, 50, 10, Color.Red) ) )
 
-  children = List(fadePane)
+  val controls = List[(Label, Node)](
+    fadeLabel -> fadePane
+  )
+  val controlGrid = ControlGrid(controls)
+
+  children = List(controlGrid)
   VBox.setVgrow(this, Priority.Always)
