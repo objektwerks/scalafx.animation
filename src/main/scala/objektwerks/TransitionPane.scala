@@ -32,7 +32,7 @@ final class TransitionPane extends VBox:
   val rectangle = Rectangle(0, 0, 20, 20)
   rectangle.setFill(Color.Red)
   val rotatePane = new Pane:
-    children = List( Transition.rotate(rectangle) ) // rotate def exists in ScalaFx.ObservableValue?
+    children = List( Transition.rotate(rectangle) ) // conflicting rotate exists in ScalaFx.ObservableValue?
 
   val scaleLabel = Label("Scale:")
   val scalePane = new Pane:
