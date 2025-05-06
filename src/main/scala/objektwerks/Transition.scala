@@ -31,7 +31,7 @@ object Transition:
     shape
 
   def translate(shape: Shape): Shape =
-    val transition = new TranslateTransition(Duration(5000), shape)
+    val transition = new TranslateTransition(Duration(millis = 5000), shape)
     transition.setToX(10)
     transition.setToY(10)
     transition.setInterpolator(Interpolator.LINEAR)
@@ -44,14 +44,14 @@ object Transition:
     path.getElements().add( MoveTo(10, 10) )
     path.getElements().add( LineTo(200, 20) )
 
-    val transition = new PathTransition(Duration(5000), path, shape)
+    val transition = new PathTransition(Duration(millis = 5000), path, shape)
     transition.setInterpolator(Interpolator.Linear)
     transition.setCycleCount(Timeline.Indefinite)
     transition.play()
     shape
 
   def rotate(shape: Shape): Shape =
-    val transition = RotateTransition(Duration(5000), shape)
+    val transition = RotateTransition(Duration(millis = 5000), shape)
     transition.setFromAngle(0)
     transition.setToAngle(360)
     transition.setInterpolator(Interpolator.Linear)
@@ -60,7 +60,7 @@ object Transition:
     shape
 
   def scale(shape: Shape): Shape =
-    val transition = ScaleTransition(Duration(5000), shape)
+    val transition = ScaleTransition(Duration(millis = 5000), shape)
     transition.setToX(0.1)
     transition.setToY(0.1)
     transition.setInterpolator(Interpolator.Linear)
@@ -69,7 +69,7 @@ object Transition:
     shape
 
   def stroke(shape: Shape): Shape =
-    val transition = new StrokeTransition(Duration(5000), shape)
+    val transition = new StrokeTransition(Duration(millis = 5000), shape)
     transition.setFromValue(Color.Red)
     transition.setToValue(Color.Yellow)
     transition.setInterpolator(Interpolator.Linear)
