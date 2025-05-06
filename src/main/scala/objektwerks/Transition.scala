@@ -41,8 +41,7 @@ object Transition:
 
   def path(shape: Shape): Shape =
     val path = new Path()
-    path.getElements().add( MoveTo(10, 10) )
-    path.getElements().add( LineTo(100, 20) )
+    path.elements = List( MoveTo(10, 10), LineTo(100, 20) )
 
     val transition = new PathTransition(Duration(millis = 5000), path, shape)
     transition.setInterpolator(Interpolator.Linear)
