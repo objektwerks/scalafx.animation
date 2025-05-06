@@ -71,7 +71,7 @@ object Transition:
   def stroke(shape: Shape): Shape =
     val transition = new StrokeTransition(Duration(millis = 5000), shape)
     transition.setFromValue(Color.Red)
-    transition.setToValue(Color.Yellow)
+    transition.setToValue(Color.Blue)
     transition.setInterpolator(Interpolator.Linear)
     transition.setCycleCount(Timeline.Indefinite)
     transition.play()
