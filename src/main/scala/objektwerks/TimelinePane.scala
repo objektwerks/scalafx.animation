@@ -1,19 +1,19 @@
 package objektwerks
 
 import scalafx.geometry.Insets
+import scalafx.scene.Node
 import scalafx.scene.control.Label
 import scalafx.scene.layout.{Pane, Priority, VBox}
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.Circle
 
 import Timeline.*
-import scalafx.scene.Node
 
 final class TimelinePane extends VBox:
   padding = Insets(6)
 
   val timeLineLabel = Label("Time Line:")
-  val timeLinePane = new Pane:
+  val timeLinePane: Pane = new Pane: // won't compile without type declaration!!!
     children = List( timeline( Circle(10, 10, 10, Color.Red) ) )
 
     val controls = List[(Label, Node)](
