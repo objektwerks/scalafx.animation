@@ -107,5 +107,6 @@ object Transition:
     
     val transitions = Seq(translate, rotate)
     val transition = ParallelTransition(shape, transitions)
+    transition.setCycleCount(Timeline.Indefinite)
     transition.play()
     shape
