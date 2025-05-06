@@ -11,7 +11,7 @@ final class TransitionPane extends VBox:
   padding = Insets(6)
 
   val fadePane = new Pane:
-    children = List( fade( Circle(150, 150, 20, Color.Green) ) )
+    children = List( fade( Circle(100, 100, 20, Color.Green) ) )
 
   children = List(fadePane)
   VBox.setVgrow(this, Priority.Always)
