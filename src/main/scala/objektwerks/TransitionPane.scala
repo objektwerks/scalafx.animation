@@ -38,7 +38,8 @@ final class TransitionPane extends VBox:
     fadeLabel -> fadePane,
     fillLabel -> fillPane,
     translateLabel -> translatePane,
-    pathLabel -> pathPane
+    pathLabel -> pathPane,
+    rotateLabel -> rotatePane
   )
   val controlGrid = ControlGrid(controls)
 
