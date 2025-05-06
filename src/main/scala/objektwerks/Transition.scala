@@ -38,8 +38,8 @@ object Transition:
 
   def path(shape: Shape): Shape =
     val path = new Path()
-    path.getElements().add( MoveTo(50, 50) )
-    path.getElements().add( LineTo(250, 250) )
+    path.getElements().add( MoveTo(10, 10) )
+    path.getElements().add( LineTo(200, 20) )
 
     val transition = new PathTransition(Duration(5000), path, shape)
     transition.setInterpolator(Interpolator.Linear)
