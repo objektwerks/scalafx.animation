@@ -38,7 +38,7 @@ final class TransitionPane extends VBox:
   val scalePane = new Pane:
     children = List( scale( Circle(10, 10, 10, Color.Red) ) )
 
-  val strokeabel = Label("Stoke:")
+  val strokeabel = Label("Stroke:")
   val strokePane = new Pane:
     children = List( stroke( Circle(10, 10, 10, Color.Red) ) )
 
