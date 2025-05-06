@@ -90,5 +90,6 @@ object Transition:
     
     val transitions = Seq(smaller, PauseTransition(Duration(millis = 2000)), larger)
     val transition = SequentialTransition(shape, transitions)
+    transition.setCycleCount(Timeline.Indefinite)
     transition.play()
     shape
