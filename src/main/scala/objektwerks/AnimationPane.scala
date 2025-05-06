@@ -1,5 +1,7 @@
 package objektwerks
 
-import scalafx.scene.control.TabPane
+import scalafx.geometry.Insets
+import scalafx.scene.layout.VBox
 
-final class AnimationPane extends TabPane
+final class AnimationPane extends VBox:
+  padding = Insets(3)
