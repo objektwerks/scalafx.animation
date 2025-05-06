@@ -1,6 +1,6 @@
 package objektwerks
 
-import scalafx.animation.{FadeTransition, FillTransition, Interpolator, Timeline}
+import scalafx.animation.{FadeTransition, FillTransition, Interpolator, Timeline, TranslateTransition}
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.Shape
 import scalafx.util.Duration
@@ -24,4 +24,11 @@ object Transition:
     transition.play()
     shape
 
-  def transalte(shape: Shape): Shape = ???
+  def translate(shape: Shape): Shape =
+    val transition = new TranslateTransition(Duration(5000), shape)
+    transition.setToX(200)
+    transition.setToY(200)
+    transition.setCycleCount(Timeline.Indefinite)
+    transition.setInterpolator(Interpolator.LINEAR)
+    transition.play()
+    shape
