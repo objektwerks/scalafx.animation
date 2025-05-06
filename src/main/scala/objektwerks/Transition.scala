@@ -19,7 +19,7 @@ object Transition:
   def fill(shape: Shape): Shape =
     val transition = FillTransition(Duration.apply(5000), shape)
     transition.setFromValue(Color.Red)
-    transition.setToValue(Color.Green)
+    transition.setToValue(Color.Blue)
     transition.setInterpolator(Interpolator.Linear)
     transition.setCycleCount(Timeline.Indefinite)
     transition.play()
