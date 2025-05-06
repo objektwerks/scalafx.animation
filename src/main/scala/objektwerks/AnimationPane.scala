@@ -1,7 +1,7 @@
 package objektwerks
 
 import scalafx.geometry.Insets
-import scalafx.scene.control.{Label, Tab, TabPane}
+import scalafx.scene.control.{Tab, TabPane}
 import scalafx.scene.layout.{Priority, VBox}
 
 final class AnimationPane extends VBox:
@@ -15,7 +15,7 @@ final class AnimationPane extends VBox:
   val timelineTab = new Tab:
     text = "Timeline"
     closable = false
-    content = Label("TODO")
+    content = TimelinePane()
 
   val tabPane = new TabPane:
     tabs = List(transitionTab, timelineTab)
