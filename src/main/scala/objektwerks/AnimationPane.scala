@@ -1,4 +1,5 @@
 package objektwerks
 
-final class AnimationPane extends TabbedPane:
-  
+import scalafx.scene.control.TabPane
+
+final class AnimationPane extends TabPane
