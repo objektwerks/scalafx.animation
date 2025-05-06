@@ -11,3 +11,8 @@ final class AnimationPane extends VBox:
     text = "Transition"
     closable = false
     content = Label("TODO")
+
+  val timelineTab = new Tab:
+    text = "Timeline"
+    closable = false
+    content = Label("TODO")
