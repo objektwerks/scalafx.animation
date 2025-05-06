@@ -1,8 +1,8 @@
 package objektwerks
 
 import scalafx.animation.{
-  FadeTransition, FillTransition, Interpolator, PathTransition, PauseTransition, RotateTransition, ScaleTransition,
-  SequentialTransition, StrokeTransition, Timeline, TranslateTransition
+  FadeTransition, FillTransition, Interpolator, ParallelTransition, PathTransition, PauseTransition,
+  RotateTransition, ScaleTransition, SequentialTransition, StrokeTransition, Timeline, TranslateTransition
 }
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.{LineTo, MoveTo, Path, Shape}
@@ -91,5 +91,21 @@ object Transition:
     val transitions = Seq(smaller, PauseTransition(Duration(millis = 3000)), larger)
     val transition = SequentialTransition(shape, transitions)
     transition.setCycleCount(Timeline.Indefinite)
+    transition.play()
+    shape
+
+  def parallel(shape: Shape): Shape =
+    val translate = TranslateTransition(Duration(millis = 5000))
+    translate.setToX(10)
+    translate.setToY(10)
+    translate.setInterpolator(Interpolator.Linear)
+    
+    val rotate = RotateTransition(Duration(millis = 5000))
+    rotate.setFromAngle(0)
+    rotate.setToAngle(360)
+    rotate.setInterpolator(Interpolator.Linear)
+    
+    val transitions = Seq(translate, rotate)
+    val transition = ParallelTransition(shape, transitions)
     transition.play()
     shape
