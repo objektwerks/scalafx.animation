@@ -1,0 +1,25 @@
+ScalaFx Animation
+-----------------
+>ScalaFx animation app using Scala 3.
+
+Build
+-----
+1. sbt clean compile
+
+Run
+---
+1. sbt run
+
+Assembly
+--------
+1. sbt clean test assembly copyAssemblyJar
+
+Execute
+-------
+1. java -jar .assembly/scalafx-form-$version.jar ( or double-click executable jar )
+
+Resources
+---------
+* [ScalaFx](https://www.scalafx.org/)
+* [JavaFx 21 Javadoc](https://openjfx.io/javadoc/21/)
+* [Jenkov JavaFx](https://jenkov.com/tutorials/javafx/index.html)
