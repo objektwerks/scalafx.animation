@@ -21,7 +21,8 @@ final class TransitionPane extends VBox:
     children = List( fill( Circle(10, 10, 10, Color.Red) ) )
 
   val controls = List[(Label, Node)](
-    fadeLabel -> fadePane
+    fadeLabel -> fadePane,
+    fillLabel -> fillPane
   )
   val controlGrid = ControlGrid(controls)
 
