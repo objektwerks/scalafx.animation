@@ -35,6 +35,8 @@ final class TransitionPane extends VBox:
     children = List( Transition.rotate(rectangle) ) // rotate def exists in ScalaFx.ObservableValue?
 
   val scaleLabel = Label("Scale:")
+  val scalePane = new Pane:
+    children = List( scale( Circle(10, 10, 10, Color.Red) ) )
 
   val controls = List[(Label, Node)](
     fadeLabel -> fadePane,
