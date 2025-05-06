@@ -8,7 +8,7 @@ final class AnimationPane extends VBox:
   padding = Insets(6)
 
   val transitionTab = new Tab:
-    text = "Transition"
+    text = "Animation"
     closable = false
     content = TransitionPane()
 
