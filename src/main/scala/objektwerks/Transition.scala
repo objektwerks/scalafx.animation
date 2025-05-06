@@ -88,11 +88,7 @@ object Transition:
     larger.setToY(1)
     larger.setInterpolator(Interpolator.Linear)
     
-    val transition = SequentialTransition(
-            shape,
-            smaller,
-            PauseTransition(Duration(millis = 2000)),
-            larger
-          )
+    val transitions = Seq(smaller, PauseTransition(Duration(millis = 2000)), larger)
+    val transition = SequentialTransition(shape, transitions)
     transition.play()
     shape
