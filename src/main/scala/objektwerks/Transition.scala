@@ -4,7 +4,7 @@ import scalafx.animation.{FadeTransition, Interpolator}
 import scalafx.scene.shape.Circle
 import scalafx.util.Duration
 
-object Transitions:
+object Transition:
   def fade(circle: Circle): Unit =
     val transition = FadeTransition(Duration.apply(5000), circle)
     transition.setFromValue(1.0)
