@@ -51,7 +51,7 @@ final class TransitionPane extends VBox:
     children = List( pause(circle) )
 
   val parallelLabel = Label("Parallel:")
-  val parallelPnae = new Pane:
+  val parallelPane = new Pane:
     val rectangle = Rectangle(10, 10, 10, 10)
     rectangle.setFill(Color.Red)
     children = List( parallel(rectangle) )
@@ -64,7 +64,8 @@ final class TransitionPane extends VBox:
     rotateLabel -> rotatePane,
     scaleLabel -> scalePane,
     strokeLabel -> strokePane,
-    pauseLabel -> pausePane
+    pauseLabel -> pausePane,
+    parallelLabel -> parallelPane
   )
   val controlGrid = ControlGrid(controls)
 
