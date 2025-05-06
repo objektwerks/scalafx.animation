@@ -1,7 +1,7 @@
 package objektwerks
 
 import scalafx.animation.{
-  FadeTransition, FillTransition, Interpolator, PathTransition, RotateTransition, Timeline, TranslateTransition
+  FadeTransition, FillTransition, Interpolator, PathTransition, RotateTransition, ScaleTransition, Timeline, TranslateTransition
 }
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.{LineTo, MoveTo, Path, Shape}
@@ -53,6 +53,15 @@ object Transition:
     val transition = RotateTransition(Duration(5000), shape)
     transition.setFromAngle(0)
     transition.setToAngle(360)
+    transition.setInterpolator(Interpolator.Linear)
+    transition.setCycleCount(Timeline.Indefinite)
+    transition.play()
+    shape
+
+  def scale(shape: Shape): Shape =
+    val transition = ScaleTransition(Duration(5000), shape)
+    transition.setToX(0.1)
+    transition.setToY(0.1)
     transition.setInterpolator(Interpolator.Linear)
     transition.setCycleCount(Timeline.Indefinite)
     transition.play()
