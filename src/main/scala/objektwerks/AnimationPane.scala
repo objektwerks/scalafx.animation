@@ -56,6 +56,9 @@ final class AnimationPane extends VBox:
     rectangle.setFill(Color.Red)
     children = List( parallel(rectangle) )
 
+  val timelineLabel = Label("Timeline:")
+
+
   val controls = List[(Label, Node)](
     fadeLabel -> fadePane,
     fillLabel -> fillPane,
