@@ -15,6 +15,6 @@ Run
 Resources
 ---------
 * [JavaFx Animations](https://dev.java/learn/javafx-animations/)
-* [ScalaFx](https://www.scalafx.org/)
 * [JavaFx Javadoc](https://openjfx.io/javadoc/24/)
 * [Jenkov JavaFx](https://jenkov.com/tutorials/javafx/index.html)
+* [ScalaFx](https://www.scalafx.org/)
