@@ -1,7 +1,7 @@
 package objektwerks
 
 import scalafx.animation.{
-  FadeTransition, FillTransition, Interpolator, ParallelTransition, PathTransition, PauseTransition,
+  FadeTransition, FillTransition, Interpolator, KeyValue, KeyFrame, ParallelTransition, PathTransition, PauseTransition,
   RotateTransition, ScaleTransition, SequentialTransition, StrokeTransition, Timeline, TranslateTransition
 }
 import scalafx.scene.paint.Color
@@ -108,4 +108,11 @@ object Transition:
     val transition = ParallelTransition(shape, transitions)
     transition.setCycleCount(Timeline.Indefinite)
     transition.play()
+    shape
+
+  def timeline(shape: Shape): Shape =
+    val kv = KeyValue(shape.translateXProperty(), 200)
+    val frame = KeyFrame(time = Duration(millis = 5000), values = Set(kv))
+    val timeline = Timeline(keyFrames = List(frame))
+    timeline.play()
     shape
