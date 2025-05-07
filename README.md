@@ -2,8 +2,6 @@ ScalaFx Animation
 -----------------
 >ScalaFx animation app using Scala 3.
 
->Managed to build out **transition** animations; but failed to build out **timeline** animations.
-
 Build
 -----
 1. sbt clean compile
