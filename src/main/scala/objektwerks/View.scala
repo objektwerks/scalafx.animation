@@ -8,7 +8,7 @@ final class View():
   val vbox = new VBox:
     spacing = 6
     padding = Insets(6)
-    children = List( AnimationPane() )
+    children = List( TransitionPane() )
 
   val scene = new Scene:
     root = vbox
