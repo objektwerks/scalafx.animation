@@ -111,8 +111,8 @@ object Transition:
     shape
 
   def timeline(shape: Shape): Shape =
-    val kv = KeyValue(shape.translateXProperty(), 200)
+    val kv = KeyValue(shape.translateXProperty(), 100)
     val frame = KeyFrame(time = Duration(millis = 5000), values = Set(kv))
-    val timeline = Timeline(keyFrames = List(frame))
+    val timeline = Timeline(List(frame))
     timeline.play()
     shape
