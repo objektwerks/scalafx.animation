@@ -10,14 +10,6 @@ Run
 ---
 1. sbt run
 
-Assembly
---------
-1. sbt clean test assembly copyAssemblyJar
-
-Execute
--------
-1. java -jar .assembly/scalafx-animation-$version.jar ( or double-click executable jar )
-
 Resources
 ---------
 * [JavaFx Animations](https://dev.java/learn/javafx-animations/)
