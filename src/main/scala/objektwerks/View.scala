@@ -12,3 +12,4 @@ final class View():
 
   val scene = new Scene:
     root = vbox
+    stylesheets = List("/style.css")
