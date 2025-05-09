@@ -8,4 +8,4 @@ object App extends JFXApp3:
       scene = View().scene
       title = "Animation"
       width = 280
-      height = 360
+      height = 370
