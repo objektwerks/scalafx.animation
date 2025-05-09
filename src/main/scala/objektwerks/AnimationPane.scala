@@ -76,7 +76,8 @@ final class AnimationPane extends VBox:
     strokeLabel -> strokePane,
     pauseLabel -> pausePane,
     parallelLabel -> parallelPane,
-    timelineLabel -> timelinePane
+    timelineLabel -> timelinePane,
+    interpolatorLabel -> interpolatorPane
   )
   val controlGrid = ControlGrid(controls)
 
