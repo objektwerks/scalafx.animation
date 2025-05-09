@@ -117,3 +117,5 @@ object Animation:
     timeline.setCycleCount(Timeline.Indefinite)
     timeline.play()
     shape
+
+  def interpolator(shape: Shape): Shape = ???
