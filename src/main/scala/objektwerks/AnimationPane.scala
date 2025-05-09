@@ -61,6 +61,8 @@ final class AnimationPane extends VBox:
     val circle = Circle(10, 10, 10, Color.Red)
     children = List( timeline(circle) )
 
+  val interpolatorLabel = Label("Interpolator:")
+
   val controls = List[(Label, Node)](
     fadeLabel -> fadePane,
     fillLabel -> fillPane,
