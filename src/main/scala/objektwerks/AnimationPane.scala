@@ -67,8 +67,10 @@ final class AnimationPane extends VBox:
     children = List( interpolator(circle) )
 
   val animationTimerLabel = Label("Animation Timer:")
-  val animationTimePane = new Label:
-    text = timer()
+  val animationTimerText = StringBuilder()
+  animationTimer(animationTimerText )
+  val animationTimerPane = new Label:
+    text = animationTimerText.result()
 
   val controls = List[(Label, Node)](
     fadeLabel -> fadePane,
@@ -81,7 +83,8 @@ final class AnimationPane extends VBox:
     pauseLabel -> pausePane,
     parallelLabel -> parallelPane,
     timelineLabel -> timelinePane,
-    interpolatorLabel -> interpolatorPane
+    interpolatorLabel -> interpolatorPane,
+    animationTimerLabel -> animationTimerPane
   )
   val controlGrid = ControlGrid(controls)
 

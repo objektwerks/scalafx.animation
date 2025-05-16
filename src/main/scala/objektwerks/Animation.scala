@@ -126,16 +126,17 @@ object Animation:
     timeline.play()
     shape
 
-  def timer(): Unit =
+  def animationTimer(builder: StringBuilder): Unit =
     var lastTime = System.nanoTime
 
-    def handler(now: Long): String =
+    def handler(now: Long): Unit =
       val currentTime = now / 1_000_000_000
 
       val text = if (currentTime > lastTime) then 
         lastTime = currentTime
         "animation timer handler called ..."
       else "animation timer handler NOT called ..."
+      builder.clear()
+      builder.append(text)
 
       AnimationTimer(handler).start()
-      text
