@@ -139,4 +139,4 @@ object Animation:
       builder.clear()
       builder.append(text)
 
-      AnimationTimer(handler).start()
+    AnimationTimer(handler).start()
