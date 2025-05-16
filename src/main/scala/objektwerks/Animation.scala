@@ -135,9 +135,9 @@ object Animation:
 
       val text = if (currentTime > lastTime) then 
         lastTime = currentTime
-        "animation timer handler called ..."
-      else "animation timer handler NOT called ..."
-      
+        "called ..."
+      else "NOT called ..."
+
       result.text = text
 
     AnimationTimer(handler).start()
