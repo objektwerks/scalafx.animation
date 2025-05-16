@@ -1,8 +1,8 @@
 package objektwerks
 
 import scalafx.animation.{
-  FadeTransition, FillTransition, Interpolator, KeyValue, KeyFrame, ParallelTransition, PathTransition, PauseTransition,
-  RotateTransition, ScaleTransition, SequentialTransition, StrokeTransition, Timeline, TranslateTransition
+  AnimationTimer, FadeTransition, FillTransition, Interpolator, KeyValue, KeyFrame, ParallelTransition, PathTransition,
+  PauseTransition, RotateTransition, ScaleTransition, SequentialTransition, StrokeTransition, Timeline, TranslateTransition
 }
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.{LineTo, MoveTo, Path, Shape}
@@ -132,7 +132,8 @@ object Animation:
     def handler(now: Long): Unit =
       val currentTime = now / 1_000_000_000
       if (currentTime > lastTime) then
-          println("animation timer handler ...")
+          println("animation timer handler called ...")
           lastTime = currentTime
+      ()
 
     AnimationTimer(handler).start()
