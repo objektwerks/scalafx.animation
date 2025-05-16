@@ -67,7 +67,7 @@ final class AnimationPane extends VBox:
     children = List( interpolator(circle) )
 
   val animationTimerLabel = Label("Animation Timer:")
-  val animationTimerTextField = Label("")
+  val animationTimerTextField = Label("No animation yet ...")
   val animationTimerText = StringBuilder()
   animationTimer(animationTimerText)
   animationTimerTextField.text = animationTimerText.result()
