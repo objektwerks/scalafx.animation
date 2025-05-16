@@ -133,6 +133,9 @@ object Animation:
     def handler(now: Long): Unit =
       val currentTime = now / 1_000_000_000
 
+      println(s"*** current time: $currentTime")
+      println(s"*** last time: $lastTime")
+
       val text = if (currentTime > lastTime) then 
         lastTime = currentTime
         "called ..."
