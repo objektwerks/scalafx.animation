@@ -70,6 +70,11 @@ final class AnimationPane extends VBox:
   val animationTimerText = Label("")
   animationTimer(animationTimerText)
 
+  val animeLabel = Label("Anime:")
+  val animePane = new Pane:
+    val circle = Circle(10, 10, 10, Color.Red)
+    children = List( anim(circle) )
+
   val controls = List[(Label, Node)](
     fadeLabel -> fadePane,
     fillLabel -> fillPane,
