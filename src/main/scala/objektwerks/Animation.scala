@@ -129,11 +129,13 @@ object Animation:
   def timer(): Unit =
     var lastTime = System.nanoTime
 
-    def handler(now: Long): Unit =
+    def handler(now: Long): String =
       val currentTime = now / 1_000_000_000
-      if (currentTime > lastTime) then
-          println("animation timer handler called ...")
-          lastTime = currentTime
-      ()
 
-    AnimationTimer(handler).start()
+      val text = if (currentTime > lastTime) then 
+        lastTime = currentTime
+        "animation timer handler called ..."
+      else "animation timer handler NOT called ..."
+
+      AnimationTimer(handler).start()
+      text
