@@ -128,13 +128,10 @@ object Animation:
     shape
 
   def animationTimer(result: Label): Unit =
-    var lastTime = System.nanoTime
+    var lastTime = System.currentTimeMillis / 1000
 
     def handler(now: Long): Unit =
-      val currentTime = now / 1_000_000_000
-
-      println(s"*** current time: $currentTime")
-      println(s"*** last time: $lastTime")
+      val currentTime = now / 1000
 
       val text = if (currentTime > lastTime) then 
         lastTime = currentTime
