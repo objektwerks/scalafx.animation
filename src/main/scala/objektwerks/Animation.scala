@@ -135,8 +135,8 @@ object Animation:
 
       val text = if (currentTime > lastTime) then 
         lastTime = currentTime
-        "called ..."
-      else "NOT called ..."
+        s"called now: $now" 
+      else s"NOT called now: $now"
 
       result.text = text
 
