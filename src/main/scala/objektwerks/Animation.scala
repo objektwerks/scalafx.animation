@@ -127,7 +127,7 @@ object Animation:
     shape
 
   def timer(): Unit =
-    var lastTime = System.nanoTime()
+    var lastTime = System.nanoTime
 
     def handler(now: Long): Unit =
       val currentTime = now / 1_000_000_000
