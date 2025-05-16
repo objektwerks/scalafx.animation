@@ -67,7 +67,7 @@ final class AnimationPane extends VBox:
     children = List( interpolator(circle) )
 
   val animationTimerLabel = Label("Animation Timer:")
-  val animationTimerText = Label("NOT called ...")
+  val animationTimerText = Label("")
   animationTimer(animationTimerText)
 
   val controls = List[(Label, Node)](
