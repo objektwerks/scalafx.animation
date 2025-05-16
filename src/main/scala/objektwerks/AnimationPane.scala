@@ -2,7 +2,7 @@ package objektwerks
 
 import scalafx.geometry.Insets
 import scalafx.scene.Node
-import scalafx.scene.control.{Label, TextField}
+import scalafx.scene.control.Label
 import scalafx.scene.layout.{Pane, Priority, VBox}
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.{Circle, Rectangle}
@@ -67,7 +67,7 @@ final class AnimationPane extends VBox:
     children = List( interpolator(circle) )
 
   val animationTimerLabel = Label("Animation Timer:")
-  val animationTimerTextField = TextField()
+  val animationTimerText = Label("")
   val animationTimerText = StringBuilder()
   animationTimer(animationTimerText)
   animationTimerTextField.text = animationTimerText.result()
@@ -84,7 +84,7 @@ final class AnimationPane extends VBox:
     parallelLabel -> parallelPane,
     timelineLabel -> timelinePane,
     interpolatorLabel -> interpolatorPane,
-    animationTimerLabel -> animationTimerTextField
+    animationTimerLabel -> animationTimerText
   )
   val controlGrid = ControlGrid(controls)
 
