@@ -4,6 +4,7 @@ import scalafx.animation.{
   AnimationTimer, FadeTransition, FillTransition, Interpolator, KeyValue, KeyFrame, ParallelTransition, PathTransition,
   PauseTransition, RotateTransition, ScaleTransition, SequentialTransition, StrokeTransition, Timeline, TranslateTransition
 }
+import scalafx.scene.control.Label
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.{LineTo, MoveTo, Path, Shape}
 import scalafx.util.Duration
@@ -126,7 +127,7 @@ object Animation:
     timeline.play()
     shape
 
-  def animationTimer(builder: StringBuilder): Unit =
+  def animationTimer(result: Label): Unit =
     var lastTime = System.nanoTime
 
     def handler(now: Long): Unit =
@@ -136,7 +137,7 @@ object Animation:
         lastTime = currentTime
         "animation timer handler called ..."
       else "animation timer handler NOT called ..."
-      builder.clear()
-      builder.append(text)
+      
+      result.text = text
 
     AnimationTimer(handler).start()

@@ -68,9 +68,7 @@ final class AnimationPane extends VBox:
 
   val animationTimerLabel = Label("Animation Timer:")
   val animationTimerTextField = Label("No animation yet ...")
-  val animationTimerTextBuilder = StringBuilder()
-  animationTimer(animationTimerTextBuilder)
-  animationTimerTextField.text = animationTimerTextBuilder.result()
+  animationTimer(animationTimerTextField)
 
   val controls = List[(Label, Node)](
     fadeLabel -> fadePane,
