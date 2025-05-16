@@ -125,3 +125,14 @@ object Animation:
     timeline.setCycleCount(Timeline.Indefinite)
     timeline.play()
     shape
+
+  def timer(): Unit =
+    var lastTime = System.nanoTime()
+
+    def handler(now: Long): Unit =
+      val currentTime = now / 1_000_000_000
+      if (currentTime > lastTime) then
+          println("animation timer handler ...")
+          lastTime = currentTime
+
+    AnimationTimer(handler).start()
