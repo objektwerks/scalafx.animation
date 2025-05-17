@@ -132,7 +132,6 @@ object Animation:
 
     def handler(now: Long): Unit =
       val currentTime = now / 1_000_000_000
-
       if (currentTime - lastTime) > 1 then
         lastTime = currentTime
         result.text = s"$currentTime"
