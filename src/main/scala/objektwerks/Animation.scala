@@ -135,6 +135,6 @@ object Animation:
       val timeDiff = currentTime - lastTime
       if timeDiff > 1 then
         lastTime = currentTime
-        result.text = s"$currentTime - $timeDiff"
+        result.text = s"now: $currentTime diff: $timeDiff"
 
     AnimationTimer(handler).start()
