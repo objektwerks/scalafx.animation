@@ -1,7 +1,7 @@
 name := "scalafx.animation"
 organization := "objektwerks"
 version := "8.0.0"
-scalaVersion := "3.6.4" // Scala 3.7.1-RC1 breaks ScalaFx!
+scalaVersion := "3.6.4" // Scala 3.7.1-RC2 breaks ScalaFx!
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "24.0.0-R35"
