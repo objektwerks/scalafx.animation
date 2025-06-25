@@ -1,17 +1,16 @@
 name := "scalafx.animation"
 organization := "objektwerks"
 version := "8.0.0"
-scalaVersion := "3.6.4" // Scala 3.7.1 still breaks ScalaFx!
+scalaVersion := "3.7.2-RC1"
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "24.0.0-R35"
   )
 }
 scalacOptions ++= Seq(
-  "-Wunused:all"
-  // "-rewrite",
-  // "-source:3.7-migration"
-  // For 3.7.0 and 3.7.1 warnings: "-Wconf:msg=Implicit parameters should be provided with a `using` clause:s"
+  "-Wunused:all",
+  // Silences 3.7.0+ implicit using warnings:
+  "-Wconf:msg=Implicit parameters should be provided with a `using` clause:s"
 )
 
 // Begin: Assembly Tasks
