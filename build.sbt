@@ -1,7 +1,7 @@
 name := "scalafx.animation"
 organization := "objektwerks"
 version := "8.0.0"
-scalaVersion := "3.8.4"
+scalaVersion := "3.9.0-RC1"
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "26.0.0-R38"
